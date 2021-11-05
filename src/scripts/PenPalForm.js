@@ -32,6 +32,8 @@ mainContainer.addEventListener("click", clickEvent => { // adding a clickable ev
 <input type="dropdown" name="chooseAuthor" class="select" /> */}
 {/* <label class="label" for="chooseRecipient">Recipient</label>
 <input type="dropdown" name="chooseRecipient" class="select" /> */}
+{/* <label class="label" for="topicClick">Topics</label>
+<input type="radio" name="topicClick" class="select" /> */}
 
 export const PenPalForm = () => {
     let html = `
@@ -43,8 +45,6 @@ export const PenPalForm = () => {
             <input type="text" name="letterFill" class="input" />
         </div>
         <div class="field">
-            <label class="label" for="topicClick">Topics</label>
-            <input type="radio" name="topicClick" class="select" />
             ${topicButtons()}
         </div>
         <div class="field">

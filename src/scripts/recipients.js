@@ -1,10 +1,10 @@
-import { getRecipients } from "./dataAccess.js";
+import { getRecipients, setRecipient } from "./dataAccess.js";
 
 document.addEventListener(
     "change",
     (evt) => {
         if (evt.target.id === "recipient") {
-          setRequestId(parseInt(evt.target.value))
+          setRecipient(parseInt(evt.target.value))
         }
     }
   )

@@ -1,13 +1,27 @@
-import { getTopics } from "./dataAccess.js";
+import { getTopics, setTopic } from "./dataAccess.js";
 
-const topics = getTopics()
+
+const mainContainer = document.querySelector("#container")
 
 export const topicButtons = () => {
-    let html = "<h2></h2>"
-    const listTopics = topics.map(topic =>{
-        return `
-        <input type="radio" name="topics" value="${topic.id}" /> ${topic.topic}
-        `
-    })
-    return html
+    const topics = getTopics()
+
+    return `
+    <label for="topics"><h3></label>
+    ${topics.map(
+        (topic) => {
+            return `
+                <div>
+                <input type="radio" name="topics" value="${topic.id}" /> ${topic.topic}
+                </div>
+          `
+        }
+    ).join("")
+        }`
 }
+
+mainContainer.addEventListener("click", clickEvent => {
+    if (clickEvent.target.type === "radio") {
+        setTopic(parseInt(clickEvent.target.value))
+    }
+})

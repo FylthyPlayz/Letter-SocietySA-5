@@ -1,10 +1,10 @@
-import { getAuthors } from "./dataAccess.js";
+import { getAuthors, setAuthor } from "./dataAccess.js";
 
 document.addEventListener(
     "change",
     (evt) => {
         if (evt.target.id === "author") {
-          setRequestId(parseInt(evt.target.value))
+          setAuthor(parseInt(evt.target.value))
         }
     }
   )

@@ -2,7 +2,13 @@ const applicationState = { //transient state for when a user clicks/chooses and 
     authors: [],
     letterstorage: [],
     topics: [],
-    recipients: []
+    recipients: [],
+    userChoices: {
+        authorId: 0,
+        recipientId: 0,
+        letterId: 0,
+        topicId: 0
+    }
 }
 
 const mainContainer = document.querySelector("#container")
@@ -56,6 +62,15 @@ export const fetchRecipients = ()=> {
             }
         )
 }
+export const fetchTopics = ()=> {
+    return fetch(`${API}/topics`)
+        .then(response => response.json())
+        .then (
+            (topics) => {
+                applicationState.topics = topics
+            }
+        )
+}
 export const getLetterStorage = () => {
     return applicationState.letterstorage.map(letterStore => ({ ...letterStore }))
 }
@@ -70,6 +85,15 @@ export const getTopics = () => {
     return applicationState.topics.map(topic => ({ ...topic }))
 }
 
-// export const setLetterStorage = () => {
-//     return applicationState.letterstorage.letterId = id
-// }
+export const setLetterStorage = () => {
+    return applicationState.userChoices.letterId = id
+}
+export const setAuthor = () => {
+    return applicationState.userChoices.authorId = id
+}
+export const setRecipient = () => {
+    return applicationState.userChoices.recipientId = id
+}
+export const setTopic = () => {
+    return applicationState.userChoices.topicId = id
+}

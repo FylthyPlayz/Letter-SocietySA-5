@@ -1,4 +1,4 @@
-import { fetchAuthors, fetchRecipients, fetchRequests } from "./dataAccess.js"
+import { fetchAuthors, fetchRecipients, fetchRequests, fetchTopics } from "./dataAccess.js"
 import { LetterSociety } from "./LetterSociety.js"
 
 const mainContainer = document.querySelector("#container")
@@ -15,6 +15,7 @@ document.addEventListener(
         fetchRequests()
         .then(() => fetchAuthors())
         .then(() => fetchRecipients())
+        .then(() => fetchTopics())
         .then(() =>{
             mainContainer.innerHTML = LetterSociety()
         })
