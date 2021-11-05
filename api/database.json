@@ -1,0 +1,60 @@
+{
+    "authors": [
+        {
+            "id": 1,
+            "author": "Jacob"
+        }, {
+            "id": 2,
+            "author": "Fat Randy"
+        }, {
+            "id": 3,
+            "author": "King Henry"
+        }, {
+            "id": 4,
+            "author": "KB: Mayor of Mboro"
+        }
+    ],
+    "topics": [
+        {
+            "id": 1,
+            "topic": "Angry"
+        }, {
+            "id": 2,
+            "topic": "Sad"
+        }, {
+            "id": 3,
+            "topic": "Happy"
+        }, {
+            "id": 4,
+            "topic": "Talkin' Dubs"
+        }, {
+            "id": 5,
+            "topic": "Get Well Soon"
+        }
+    ],
+    "recipients": [
+        {
+            "id": 1,
+            "recipient": "Fat Randy"
+        }, {
+            "id": 2,
+            "recipient": "Jacob"
+        }, {
+            "id": 3,
+            "recipient": "King Henry"
+        }, {
+            "id": 4,
+            "recipient": "KB: Mayor of Mboro"
+        }
+    ],
+    "letterstorage": [
+{
+        "id:": 1,
+        "author": "Jacob",
+        "letter": "Fat Randy, your golden leg gave us a win this week. We honor you and are blessed with your thiccness. Please stay on the Titans until you start missing kicks, then you can leave. We love you....for now.",
+        "topics": "Congratz",
+        "recipient": "Fat Randy",
+        "dateSent": "2021-11-1"
+    }
+]
+}

@@ -1,0 +1,14 @@
+.container {
+    display : flex;
+    flex-direction: column;
+}
+.label {
+    font-size: large;
+}
+.class {
+    size: 2rem;
+}
+#letterStorage {
+display: flex;
+box-shadow: .5rem;
+}
