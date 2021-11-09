@@ -35,7 +35,7 @@ mainContainer.addEventListener("click", clickEvent => { // adding a clickable ev
 {/* <label class="label" for="topicClick">Topics</label>
 <input type="radio" name="topicClick" class="select" /> */}
 
-export const PenPalForm = () => {
+export const PenPalForm = () => { // html display of the form fields
     let html = `
     <div class="field">
         ${Authors()}

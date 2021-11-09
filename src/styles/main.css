@@ -8,7 +8,12 @@
 .class {
     size: 2rem;
 }
-#letterStorage {
+.letterfill {
 display: flex;
 box-shadow: .5rem;
+}
+.input {
+    display: flex;
+    box-sizing: content-box;
+    size: 10rem;
 }

@@ -1,17 +1,17 @@
 {
-    "authors": [
+    "users": [
         {
             "id": 1,
-            "author": "Jacob"
+            "name": "Jacob"
         }, {
             "id": 2,
-            "author": "Fat Randy"
+            "name": "Fat Randy"
         }, {
             "id": 3,
-            "author": "King Henry"
+            "name": "King Henry"
         }, {
             "id": 4,
-            "author": "KB: Mayor of Mboro"
+            "name": "KB: Mayor of Mboro"
         }
     ],
     "topics": [
@@ -32,21 +32,7 @@
             "topic": "Get Well Soon"
         }
     ],
-    "recipients": [
-        {
-            "id": 1,
-            "recipient": "Fat Randy"
-        }, {
-            "id": 2,
-            "recipient": "Jacob"
-        }, {
-            "id": 3,
-            "recipient": "King Henry"
-        }, {
-            "id": 4,
-            "recipient": "KB: Mayor of Mboro"
-        }
-    ],
+
     "letterstorage": [
 {
         "id:": 1,

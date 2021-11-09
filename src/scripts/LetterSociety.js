@@ -1,10 +1,10 @@
 import { Letters } from "./letters.js"
 import { PenPalForm } from "./PenPalForm.js"
 
-
+// page dedicated to displaying the HTML.
 export const LetterSociety = () => {
     return `
-    <h1>Letter Society</h1>
+    <h1>The Letter Society</h1>
     <section class="PenPalForm">
         ${PenPalForm()}
         </section>

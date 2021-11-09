@@ -1,8 +1,7 @@
 const applicationState = { //transient state for when a user clicks/chooses and writes things
-    authors: [],
+    users: [],
     letterstorage: [],
     topics: [],
-    recipients: [],
     userChoices: {
         authorId: 0,
         recipientId: 0,
@@ -26,7 +25,7 @@ export const fetchRequests = () => { // a request to get the letter storage from
 }
 
 
-export const sendRequest = () => { // This will send the 
+export const sendRequest = () => { // This will send the new post....
     const date = new Date().toLocaleDateString()
     applicationState.letterstorage.dateSent = date
     const fetchOptions = {
@@ -43,26 +42,26 @@ export const sendRequest = () => { // This will send the
     })
 }
 
-export const fetchAuthors = ()=> {
-    return fetch(`${API}/authors`)
+export const fetchAuthors = ()=> { // this will grab the authors and return them
+    return fetch(`${API}/users`)
         .then(response => response.json())
         .then (
-            (authors) => {
-                applicationState.authors = authors
+            (users) => {
+                applicationState.users = users
             }
         )
 }
 
-export const fetchRecipients = ()=> {
-    return fetch(`${API}/recipients`)
+export const fetchRecipients = ()=> { // this will grab and return the recipients
+    return fetch(`${API}/users`)
         .then(response => response.json())
         .then (
-            (recipients) => {
-                applicationState.recipients = recipients
+            (users) => {
+                applicationState.users = users
             }
         )
 }
-export const fetchTopics = ()=> {
+export const fetchTopics = ()=> {// this will grab and return the topics
     return fetch(`${API}/topics`)
         .then(response => response.json())
         .then (
@@ -71,20 +70,21 @@ export const fetchTopics = ()=> {
             }
         )
 }
+// get functions that will return a copy of the data from permanent state
 export const getLetterStorage = () => {
     return applicationState.letterstorage.map(letterStore => ({ ...letterStore }))
 }
 
 export const getAuthors = () => {
-    return applicationState.authors.map(author => ({ ...author }))
+    return applicationState.users.map(author => ({ ...author }))
 }
 export const getRecipients = () => {
-    return applicationState.recipients.map(recipient => ({ ...recipient }))
+    return applicationState.users.map(recipient => ({ ...recipient }))
 }
 export const getTopics = () => {
     return applicationState.topics.map(topic => ({ ...topic }))
 }
-
+// set functions that will track user clicks and set them as an ID in the application state
 export const setLetterStorage = () => {
     return applicationState.userChoices.letterId = id
 }
